@@ -1,12 +1,14 @@
 {
   "name": "react-hooks",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
-  },
+  "version": "1.0.0",
+  "description": "A playground for React Hooks.",
+  "author": "Roberto Achar <robertoachar@gmail.com>",
+  "homepage": "https://github.com/robertoachar/react-hooks#readme",
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -21,5 +23,18 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertoachar/react-hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertoachar/react-hooks/issues"
+  },
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-scripts": "2.0.5"
+  },
+  "private": true
 }
