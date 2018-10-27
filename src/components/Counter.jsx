@@ -16,14 +16,9 @@ export default class Counter extends Component {
   render() {
     return (
       <div>
-        <p>
-          <span>Counter: {this.state.count}</span>
-        </p>
-        <p>
-          <button type="button" onClick={this.handleCounter}>
-            Increment
-          </button>
-        </p>
+        <button type="button" onClick={this.handleCounter}>
+          Increment: {this.state.count}
+        </button>
       </div>
     );
   }

@@ -5,14 +5,9 @@ const CounterHooks = () => {
 
   return (
     <div>
-      <p>
-        <span>Counter: {count}</span>
-      </p>
-      <p>
-        <button type="button" onClick={() => setCount(count + 1)}>
-          Increment
-        </button>
-      </p>
+      <button type="button" onClick={() => setCount(count + 1)}>
+        Increment: {count}
+      </button>
     </div>
   );
 };

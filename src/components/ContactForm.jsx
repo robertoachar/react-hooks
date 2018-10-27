@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import useInput from './useInput';
+export default class ContactForm extends Component {
+  constructor(props) {
+    super(props);
 
-const ContactForm = () => {
-  const name = useInput('Roberto Achar');
-  const email = useInput('robertoachar@gmail.com');
-  const message = useInput('Mensagem vai aqui...');
+    this.state = {
+      name: 'Roberto Achar',
+      email: 'robertoachar@gmail.com',
+      message: 'Mensagem...'
+    };
 
-  return (
-    <div>
-      <h2>Forms</h2>
-      <input type="text" placeholder="Name" {...name} />
-      <input type="text" placeholder="Email" {...email} />
-      <textarea rows="3" {...message} />
-    </div>
-  );
-};
+    this.handleName = this.handleName.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
+    this.handleMessage = this.handleMessage.bind(this);
+  }
 
-export default ContactForm;
+  handleName(e) {
+    this.setState({ name: e.target.value });
+  }
+
+  handleEmail(e) {
+    this.setState({ email: e.target.value });
+  }
+
+  handleMessage(e) {
+    this.setState({ message: e.target.value });
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="text" value={this.state.name} onChange={this.handleName} />
+        <input
+          type="text"
+          value={this.state.email}
+          onChange={this.handleEmail}
+        />
+        <textarea
+          rows="3"
+          value={this.state.message}
+          onChange={this.handleMessage}
+        />
+      </div>
+    );
+  }
+}
